@@ -1,3 +1,4 @@
+// This script is used to set the E2E port and dist directory.
 import { createHash } from "node:crypto";
 import { realpathSync } from "node:fs";
 import path from "node:path";

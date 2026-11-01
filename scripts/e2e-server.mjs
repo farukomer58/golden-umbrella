@@ -1,3 +1,4 @@
+// This script is used to start the E2E server for the website.
 import { spawn } from "node:child_process";
 import { readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { cp, lstat, mkdir, rm } from "node:fs/promises";
