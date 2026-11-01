@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Golden Umbrella
 
-## Getting Started
+A multilingual foundation website built with Next.js 16, React 19, TypeScript
+and Tailwind CSS. It exports static HTML; no database or runtime backend is
+required.
 
-First, run the development server:
+Use Node from `.node-version`, then:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000). The root page is Turkish; localized
+home and About pages live under `/tr/`, `/nl/` and `/en/`. Content is an initial
+draft, pending organizational approval.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx playwright install --with-deps chromium
+npm run qa
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [testing and QA](docs/testing.md) for commands, isolation, CI and limitations.
+Read [AGENTS.md](AGENTS.md) and the linked project documentation before changes.
+`npm run build` creates the static site in `out/`; serve that folder with a
+static host instead of `next start`.

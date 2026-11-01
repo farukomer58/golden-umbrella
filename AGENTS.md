@@ -53,7 +53,7 @@ This file defines how coding agents work in this repository. Project-specific re
 - Test observable behavior at the lowest effective level; add regression coverage for meaningful behavior changes.
 - Do not weaken, skip, delete, or rewrite tests merely to conceal a defect.
 - Make tests deterministic: control time, randomness, external network dependencies, and shared state where relevant.
-- Run `npm run qa` before declaring implementation complete. This is the canonical quality gate and should match CI.
+- Run full `npm run qa` (including Playwright) before completing every implementation task. `--no-e2e` is for iteration only and never satisfies task completion. This is the canonical quality gate and should match CI.
 - Use `npm run qa:fast` only if that script exists, for iteration; it does not replace the full gate.
 - Fix underlying problems rather than adding type escapes, lint ignores, or skipped tests solely to pass checks.
 - If a check cannot run, state exactly which check and why; never claim it passed.

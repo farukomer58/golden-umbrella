@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+:root {
+  color: #182a29;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.65;
+}
+body {
+  margin: 0;
+}
+header,
+main,
+footer {
+  padding: 2rem max(1rem, calc((100% - 75rem) / 2));
+}
+header {
+  background: #e7f6f4;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+a {
+  color: #176b66;
+  text-decoration: underline;
+}
+a:focus-visible {
+  outline: 3px solid #775a12;
+  outline-offset: 4px;
+}
+h1 {
+  font:
+    bold clamp(2.25rem, 5vw, 4rem) Georgia,
+    serif;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+p {
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+main {
+  min-height: 45vh;
+}
+footer {
+  background: #fff8e5;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  background: white;
+  padding: 0.5rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
